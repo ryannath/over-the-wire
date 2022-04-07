@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import IndexList from '../components/elements/IndexList/IndexList'
+import MainTitle from '../components/elements/MainTitle/MainTitle'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,27 +15,25 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to My Over The Wire Blog
-        </h1>
+      <main>
+        <MainTitle>Welcome to my Over The Wire Blog</MainTitle>
 
         <ul>
           <li>
             <Link href='/bandit'>Bandit</Link>
-            <ol>
-              <li><Link href='/bandit/level0'>level 0</Link></li>
-              <li><Link href=''>level 1</Link></li>
-              <li><Link href=''>level 2</Link></li>
-            </ol>
+            <IndexList
+              path='/bandit/'
+              text='bandit'
+              range={1}
+            />
           </li>
           <li>
             Natas
-            <ol>
-              <li><Link href=''>level 0</Link></li>
-              <li><Link href=''>level 1</Link></li>
-              <li><Link href=''>level 2</Link></li>
-            </ol>
+            <IndexList
+              path='/natas/'
+              text='natas'
+              range={6}
+            />
           </li>
         </ul>
       </main>

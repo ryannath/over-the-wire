@@ -1,20 +1,23 @@
 import Head from "next/head"
 import Link from "next/link"
+import IndexList from "../../components/elements/IndexList/IndexList"
+import MainTitle from "../../components/elements/MainTitle/MainTitle";
+
+const numPages = 1;
 
 const bandit = () => {
-
   return (
-    <div>
-      <Head>
-        <title>Bandit</title>
-      </Head>
-      <h1>Bandit</h1>
-      <ul>
-        <li>
-          <Link href='/bandit/level0'>Level 0</Link>
-        </li>
-      </ul>
-    </div>
-  )
+    <>
+    <Head>
+      <title>Bandit</title>
+    </Head>
+      <MainTitle>Bandit</MainTitle>
+      <IndexList
+        path='/bandit/'
+        text='bandit'
+        range={numPages}
+      />
+    </>
+  );
 }
 export default bandit

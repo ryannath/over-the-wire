@@ -1,8 +1,8 @@
-.list {
-  max-width: 40rem;
-  margin: auto;
-}
-
 .listItem {
   text-transform: capitalize;
+  list-style: circle;
+  margin-left: 2rem;
+  a {
+    color: inherit;
+  }
 }

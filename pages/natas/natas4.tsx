@@ -1,3 +1,5 @@
+import PageNav from "../../components/elements/PageNav/PageNav"
+
 const natas4 = () => {
   return (
     <div>
@@ -11,6 +13,7 @@ const natas4 = () => {
       the html document. I inserted an anchor tag with a link to
       the natas4 page. I clicked the link I made in natas5, and I was
       given access to natas4.
+      <PageNav link1='natas3' link2='natas5'/>
     </div>
   )
 }

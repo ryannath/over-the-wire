@@ -1,6 +1,12 @@
+import PageNav from "../../components/elements/PageNav/PageNav"
+
 const natas3 = () => {
   return (
     <div>
+      <h1>Natas 3</h1>
+      <p>
+        T
+      </p>
       <p>
         I couldn&apos;t find anything in this webpage, the document
         looks quite clean except a comment about how even Google
@@ -18,6 +24,7 @@ const natas3 = () => {
         So I appended this to the root address, and I found it to be a directory path with a users.txt and
         in it the password.
       </p>
+      <PageNav link1='natas2' link2='natas4'/>
     </div>
   )
 }

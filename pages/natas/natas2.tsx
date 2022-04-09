@@ -1,5 +1,5 @@
+import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import PageNav from "../../components/elements/PageNav/PageNav"
-import genericStyles from '/styles/generic.module.scss'
 
 const natas2 = () => {
   return (
@@ -21,19 +21,15 @@ const natas2 = () => {
           on the developer tools, however the developer tools didn&apos;t show
           any other files worth noting, see the picture below.
         </p>
-        <div className={genericStyles.imgContainer}>
-          <img src='/natas2.png' alt='Image showing file hierarchy shown by developer tools' width='200'/>
-        </div>
+        <BlogImage src='/natas2.png' alt='Image showing file hierarchy shown by developer tools' width={200} />
         <p>
           I did however notice that the pixel photo was located in the
           &quot;files&quot; directory. So I tried appending <code>/files</code> to the
           url, and there it was, <code>users.txt</code>. I simply clicked this file
           and it displayed the password for the next level.
         </p>
-        <div className={genericStyles.imgContainer}>
-          <img src='/natas2-2.png' alt='The directory page shown after /files was appended, listed as
+        <BlogImage src='/natas2-2.png' alt='The directory page shown after /files was appended, listed as
             one of the file is users.txt' width={320}/>
-        </div>
       </section>
       <section>
         <h2>Reflection</h2>

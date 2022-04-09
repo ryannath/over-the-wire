@@ -1,6 +1,6 @@
+import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
 import PageNav from "../../components/elements/PageNav/PageNav"
-import genericStyles from '/styles/generic.module.scss'
 
 const natas3 = () => {
   return (
@@ -13,7 +13,10 @@ const natas3 = () => {
           nothing obvious except a snarky cheeky remark about how even Google
           can&apos; find it. I had a look around the file structure and there was nothing there as well.
         </p>
-        <div className={genericStyles.imgContainer}><img alt="asdf" src="/natas3-1.png" width="600px" /></div>
+        <BlogImage
+          alt="The html page showing nothing much except a comment about how not even Google will find any information leak"
+          src="/natas3-1.png"
+        />
         <p>
           Without much luck, I tried using that clue, of not being able to be seen by Google, and searched
           &quot;programming how to hide sometthing in website from google&quot;.

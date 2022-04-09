@@ -82,7 +82,7 @@ const level0: NextPage = () => {
           we ourselves may be writing.
         </p>
       </div>
-      <PageNav link1='/bandit' link2=''/>
+      <PageNav link1='/bandit' link2='/natas'/>
     </div>
   )
 }

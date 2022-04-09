@@ -2,9 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import IndexList from '../components/elements/IndexList/IndexList'
+import BanditIndexList from '../components/elements/IndexList/BanditIndexList'
+import NatasIndexList from '../components/elements/IndexList/NatasIndexList'
 import MainTitle from '../components/elements/MainTitle/MainTitle'
 import styles from '../styles/Home.module.css'
+import style from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
   return (
@@ -16,27 +18,37 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <MainTitle>Welcome to my Over The Wire Blog</MainTitle>
-
-        <ul>
+        <MainTitle>Welcome to Security Explored</MainTitle>
+        <div className={style.sectionContainer}>
+          <h2>What is Security Explored?</h2>
+          <p>
+            As the name suggests, Security Explored is an exploration
+            of the field of security engineering, primarily the type of vulnerabilities
+            attackers can use to hack computer softwares. This exploration is done through
+            attempting several capture the flag challenges hosted by{' '}
+            <a href='https://overthewire.org/wargames/'>OverTheWire</a> . Throughout these
+            wargames, new concepts are introduced and researched, allowing for a broad
+            range of exposure to the multitude of ways attackers may exploit a system.
+          </p>
+        </div>
+        <h2>List of Capture the Flags</h2>
+        <ul className={style.List}>
           <li>
-            <Link href='/bandit'>Bandit</Link>
-            <IndexList
-              path='/bandit/'
-              text='bandit'
-              range={1}
-            />
+            <Link href='/bandit'><a className={style.ctfTitle}>Bandit</a></Link>
+            <div>
+              <BanditIndexList />
+            </div>
           </li>
           <li>
-            Natas
-            <IndexList
-              path='/natas/'
-              text='natas'
-              range={6}
-            />
+            <Link href='/natas'><a className={style.ctfTitle}>Natas</a></Link>
+            <div>
+              <NatasIndexList />
+            </div>
           </li>
         </ul>
       </main>
+      <h2>Cipher</h2>
+      <Link href='/cipher'>Caesar Cipher</Link>
 
       <footer className={styles.footer}>
         <a

@@ -1,7 +1,5 @@
-import Image from "next/image"
 import PageNav from "../../components/elements/PageNav/PageNav"
-import devToolsPic from '/public/natas2.png'
-import directoryPic from '/public/natas2-2.png'
+import genericStyles from '/styles/generic.module.scss'
 
 const natas2 = () => {
   return (
@@ -23,14 +21,8 @@ const natas2 = () => {
           on the developer tools, however the developer tools didn&apos;t show
           any other files worth noting, see the picture below.
         </p>
-        <div>
-          <Image
-            src={devToolsPic}
-            width={devToolsPic.width * 0.8}
-            height={devToolsPic.height * 0.8}
-            alt='Image showing file hierarchy shown by developer tools'
-            layout='intrinsic'
-          />
+        <div className={genericStyles.imgContainer}>
+          <img src='/natas2.png' alt='Image showing file hierarchy shown by developer tools' width='200'/>
         </div>
         <p>
           I did however notice that the pixel photo was located in the
@@ -38,15 +30,9 @@ const natas2 = () => {
           url, and there it was, <code>users.txt</code>. I simply clicked this file
           and it displayed the password for the next level.
         </p>
-        <div>
-          <Image
-            src={directoryPic}
-            width={directoryPic.width * 0.6}
-            height={directoryPic.height * 0.6}
-            alt='The directory page shown after /files was appended, listed as
-            one of the file is users.txt'
-            layout='intrinsic'
-          />
+        <div className={genericStyles.imgContainer}>
+          <img src='/natas2-2.png' alt='The directory page shown after /files was appended, listed as
+            one of the file is users.txt' width={320}/>
         </div>
       </section>
       <section>

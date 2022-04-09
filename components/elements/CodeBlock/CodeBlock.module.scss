@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+.CodeBlock {
+  margin: 1rem 1rem 2rem 1rem;
+  font-size: 0.85rem;
+  code {
+    font-family: 'Oxygen Mono', monospace !important;
+  }
+
+  pre {
+    padding: 1.5rem 1.2rem !important;
+  }
+  // margin: 1rem 0rem;
+  // padding: 1rem 0rem;
+  // background-color: rgb(239, 239, 239);
+  // color: inherit;
+  // border-radius: 0.8rem;
+
+  // code {
+  //   background-color: transparent;
+  //   border: none;
+  //   color: inherit;
+  // }
+}

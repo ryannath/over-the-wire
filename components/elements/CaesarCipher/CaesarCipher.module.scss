@@ -1,0 +1,13 @@
+@import '/styles/var.scss';
+
+.textField {
+  width: 100%;
+}
+
+.container {
+  margin: 2rem 0rem;
+}
+
+.selected {
+  filter: drop-shadow(0px 0px 2px $highlight);
+}

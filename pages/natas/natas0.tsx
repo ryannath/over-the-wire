@@ -1,4 +1,6 @@
+import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
 import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
 const natas0 = () => {
   return (
@@ -21,6 +23,11 @@ const natas0 = () => {
           by web browsers, the source of the page is still exposed.
         </p>
       </section>
+      <SpoilerKey>
+        {`gtVrDuiDfck831PqWsLEZy5gyDz1clto`}
+      </SpoilerKey>
+
+
       <PageNav link1='/natas' link2='natas1' />
     </div>
   )

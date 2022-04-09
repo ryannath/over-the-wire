@@ -1,5 +1,6 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 import genericStyles from '/styles/generic.module.scss'
 
 const natas4 = () => {
@@ -96,6 +97,9 @@ const natas4 = () => {
           was able to login from a completely different application. 
         </p>
       </section>
+      <SpoilerKey>
+        {`iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq`}
+      </SpoilerKey>
       <PageNav link1='natas3' link2='natas5' />
     </div>
   )

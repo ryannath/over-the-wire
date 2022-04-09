@@ -1,6 +1,6 @@
 import IndexList from "./IndexList"
 
-const numPages = 9;
+const numPages = 15;
 
 const NatasIndexList = () => {
   return (

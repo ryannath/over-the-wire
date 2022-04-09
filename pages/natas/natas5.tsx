@@ -1,6 +1,7 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
 import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
 const natas5 = () => {
   return (
@@ -107,6 +108,9 @@ const natas5 = () => {
           your internet activity if you encounter their ads often.
         </p>
       </section>
+      <SpoilerKey>
+        {`aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1`}
+      </SpoilerKey>
       <PageNav link1='natas4' link2='natas6' />
     </div>
   )

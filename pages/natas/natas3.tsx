@@ -1,6 +1,7 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
 import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
 const natas3 = () => {
   return (
@@ -84,6 +85,9 @@ const natas3 = () => {
           easily notice the vulnerability.
         </p>
       </section>
+      <SpoilerKey>
+        {`Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ`}
+      </SpoilerKey>
       <PageNav link1='natas2' link2='natas4' />
     </div>
   )

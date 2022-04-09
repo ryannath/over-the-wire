@@ -1,4 +1,5 @@
 import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
 const natas1 = () => {
   return (
@@ -51,6 +52,9 @@ const natas1 = () => {
           Javascript.
         </p>
       </section>
+      <SpoilerKey>
+        {`ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi`}
+      </SpoilerKey>
       <PageNav link1='natas0' link2='natas2'/>
     </div>
   )

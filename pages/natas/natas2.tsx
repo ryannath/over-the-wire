@@ -1,5 +1,6 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
 const natas2 = () => {
   return (
@@ -49,7 +50,9 @@ const natas2 = () => {
           every other client side files are also publically available.
         </p>
       </section>
-
+      <SpoilerKey>
+        {`sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14`}
+      </SpoilerKey>
 
       <PageNav link1='natas1' link2='natas3' />
     </div>

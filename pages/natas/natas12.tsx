@@ -1,3 +1,6 @@
+import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
+
 const natas12 = () => {
   return (
     <div>
@@ -11,6 +14,10 @@ const natas12 = () => {
         obtain the password.
         https://www.hacksplaining.com/exercises/file-upload#/start
       </p>
+      <SpoilerKey>
+        {`jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY`}
+      </SpoilerKey>
+      <PageNav link1='natas11' link2='natas13' />
     </div>
   )
 }

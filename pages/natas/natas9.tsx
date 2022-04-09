@@ -1,16 +1,15 @@
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
-const natas14 = () => {
+const natas9 = () => {
   return (
     <div>
-      <h1>Natas 14</h1>
-      &quot; or 1 = 1 # 
+      <h1>Natas 9</h1>
       <SpoilerKey>
-        {`AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J`}
+        {`nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu`}
       </SpoilerKey>
-      <PageNav link1='natas13' link2='' />
+      <PageNav link1='natas8' link2='natas10' />
     </div>
   )
 }
-export default natas14
+export default natas9

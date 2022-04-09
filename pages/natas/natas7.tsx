@@ -1,4 +1,5 @@
 import PageNav from "../../components/elements/PageNav/PageNav"
+import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
 const natas7 = () => {
   return (
@@ -62,6 +63,9 @@ const natas7 = () => {
         <a href='https://en.wikipedia.org/wiki/File_inclusion_vulnerability'>Wikipedia</a> has an entry on file inclusion vulnerability which includes example
         vulnerable code.
       </p>
+      <SpoilerKey>
+        {`DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe`}
+      </SpoilerKey>
       <PageNav link1='natas6' link2='natas8' />
     </div>
   )

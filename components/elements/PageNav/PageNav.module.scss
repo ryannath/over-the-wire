@@ -9,8 +9,10 @@
 .navButton {
   position: relative;
   display: inline-block;
+  color: inherit;
+  font-size: 1.5rem;
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     color: $highlight
   }  
 }

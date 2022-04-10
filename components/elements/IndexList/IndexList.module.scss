@@ -2,7 +2,14 @@
   text-transform: capitalize;
   list-style: circle;
   margin-left: 2rem;
+  width: fit-content;
+  &:hover {
+    position: relative;
+    transform-origin: left top;
+    transform: scale(1.1);
+  }
   a {
     color: inherit;
+    
   }
 }

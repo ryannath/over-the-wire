@@ -1,25 +1,25 @@
-import { ChangeEvent, RefObject, useEffect, useRef, useState } from "react";
-import styles from './CaesarCipher.module.scss'
+import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
 
-interface AlphabetMap {
-  [character: string]: number;
-}
-
-const CaesarCipher = () => {
-  const ref = useRef(null) as RefObject<HTMLTextAreaElement>;
-  const [decodedText, setDecodedText] = useState('');
-  const [encodedText, setEncodedText] = useState('');
+const CaesarCipher = (
+  { setEncodedText, setDecodedText, encodedText, decodedText, lastSelected }:
+    {
+      setEncodedText: Dispatch<SetStateAction<string>>,
+      setDecodedText: Dispatch<SetStateAction<string>>,
+      encodedText: string,
+      decodedText: string,
+      lastSelected: number
+  }) => {
+  
   const [offsetShift, setOffsetShift] = useState(0);
-  const [lastSelected, setLastSelected] = useState(0);
+  interface AlphabetMap {
+    [character: string]: number;
+  }
 
-  useEffect(() => {
-    if (!ref.current) return;
-    ref.current.select();
-  }, [])
-
+  // constructs a mapping data structure
   const [alphabetToNum, numToAlphabet] = ((num) => {
     let alphabetMap: AlphabetMap = {};
-    let alphabetArray = []
+    let alphabetArray: Array<string> = []
+
     for (let i = 0; i < num; i++) {
       let character = String.fromCharCode('a'.charCodeAt(0) + i);
       alphabetMap[character] = i;
@@ -30,37 +30,27 @@ const CaesarCipher = () => {
 
   const caesarEncode = (msg: string, offset: number) => {
 
-    msg = msg.toLowerCase();
     let result = [];
     for (let i = 0; i < msg.length; i++) {
 
-      if (!(msg[i] in alphabetToNum)) {
-        console.log(i)
+      if (!(msg[i].toLowerCase() in alphabetToNum)) {
+        // not a valid character to encode
         result[i] = msg[i];
+
       } else {
-        let alphabetIndex = alphabetToNum[msg[i]] + offset;
+        let alphabetIndex = alphabetToNum[msg[i].toLowerCase()] + offset;
+        // The following is done to take module of negative numbers correctly
+        // module does not work for negative numbers in Javascript
         const len = numToAlphabet.length;
         alphabetIndex = ((alphabetIndex % len) + len) % len;
-        result[i] = numToAlphabet[alphabetIndex];
+        let upFix = msg[i] < 'a' ? 'a'.charCodeAt(0) - 'A'.charCodeAt(0) : 0;
+
+        result[i] = String.fromCharCode(numToAlphabet[alphabetIndex].charCodeAt(0) - upFix);
       }
     }
     console.log(result)
     return result.join('');
   };
-
-  const handleEncode = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    if (!offsetShift) setOffsetShift(0);
-    setDecodedText(e.target.value);
-    const encodedMessage = caesarEncode(e.target.value, offsetShift || 0);
-    setEncodedText(encodedMessage);
-  }
-
-  const handleDecode = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    if (!offsetShift) setOffsetShift(0);
-    setEncodedText(e.target.value);
-    const decodedMessage = caesarEncode(e.target.value, -offsetShift || 0);
-    setDecodedText(decodedMessage);
-  }
 
   const handleChangeOffset = (e: ChangeEvent<HTMLInputElement>) => {
     let offset = parseInt(e.target.value);
@@ -69,29 +59,24 @@ const CaesarCipher = () => {
       const encodedMessage = caesarEncode(decodedText, offset || 0);
       setEncodedText(encodedMessage);
     } else {
-      const decodedMessage = caesarEncode(encodedText, -offset || 0);
+      const decodedMessage = caesarEncode(encodedText, - offset || 0);
       setDecodedText(decodedMessage);
     }
   }
 
+  
+  if (lastSelected == 0) {
+    setEncodedText(caesarEncode(decodedText, offsetShift || 0));
+  } else {
+    setDecodedText(caesarEncode(encodedText, -offsetShift || 0));
+  }
 
   return (
     <div>
-      <div className={styles.container}>
-        <label>Decoded text/plain string</label>
-        <div>
-          <textarea ref={ref} className={`${styles.textField} ${!lastSelected? styles.selected : ''}`} rows={5} value={decodedText} onChange={handleEncode} onSelect={() => setLastSelected(0)} />
-        </div>
-      </div>
-      <label>Shift</label>
+      <h1>Caesar Cipher</h1>
       <div>
+        <label>Shift by: </label>
         <input type='number' value={offsetShift} onChange={handleChangeOffset}></input>
-      </div>
-      <div className={styles.container}>
-        <label>Encoded string</label>
-        <div>
-          <textarea className={`${styles.textField} ${lastSelected? styles.selected : ''}`} rows={5} value={encodedText} onChange={handleDecode} onSelect={() => setLastSelected(1)} />
-        </div>
       </div>
     </div>
   )

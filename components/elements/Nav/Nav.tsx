@@ -9,10 +9,19 @@ const Nav = () => {
           <Link href='/'><a>Home</a></Link>
         </li>
         <li className={styles.navLink}>
-          <Link href='/bandit'><a title='previous'>Bandit</a></Link>
+          <Link href='/bandit'><a>Bandit</a></Link>
         </li>
         <li className={styles.navLink}>
-          <Link href='/natas'><a title='next'>Natas</a></Link>
+          <Link href='/natas'><a>Natas</a></Link>
+        </li>
+        <li className={styles.navLink}>
+          <Link href='/leviathan'><a>Leviathan</a></Link>
+        </li>
+        <li className={styles.navLink}>
+          <Link href='/narnia'><a>Narnia</a></Link>
+        </li>
+        <li className={styles.navLink}>
+          <Link href='/cipher'><a>Cipher</a></Link>
         </li>
       </ul>
     </nav>

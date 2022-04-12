@@ -28,7 +28,7 @@ const natas5 = () => {
           <a href='https://www.quora.com/How-do-websites-remember-you-are-logged-in'>Quora</a>.
           The answer was cookie!.
         </p>
-        <BlogImage src='/images/natas5-2.png' alt='Cookie shown on the developer tools' />
+        <BlogImage src='/images/natas5-2.png' alt='Cookie shown on the developer tools' width={400}/>
         <p>
           Most of the cookies seem to be quite cryptic, except one named &quot;loggedin&quot;.
           The loggedin cookie has a value of 0. So I searched up ways to make that 0 to a 1.
@@ -46,7 +46,6 @@ const natas5 = () => {
       </section>
       <section>
         <h2>Research</h2>
-        <a href='https://www.kaspersky.com/resource-center/definitions/cookies'>Kaspersky</a>
         <p>
           What are cookies? Cookies are just some stored data which assist websites in
           identifying who you are. The type of data which they store may vary. It really depends
@@ -59,7 +58,8 @@ const natas5 = () => {
           They can even store
           things such as the length of time you&apos;ve spent on their websites. Now
           fortunately, not everyone can read each other&apos;s cookies, the cookies
-          made by one domain is limited to be read and edited by the same domain.
+          made by one domain is limited to be read and edited by the same domain. More
+          can be read about cookies on the following <a href='https://www.kaspersky.com/resource-center/definitions/cookies'>webpage by Kaspersky</a>
         </p>
         <p>
           Unfortunately, there exists another type of cookie, third party cookies. Third

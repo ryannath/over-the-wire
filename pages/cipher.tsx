@@ -1,11 +1,11 @@
-import CaesarCipher from "../components/elements/CaesarCipher/CaesarCipher"
-import MainTitle from "../components/elements/MainTitle/MainTitle"
+import Cipher from "../components/elements/Cipher/Cipher"
 
 const cipher = () => {
+
+
   return (
     <div>
-      <MainTitle>Caesar Cipher</MainTitle>
-      <CaesarCipher />
+      <Cipher />
     </div>
   )
 }

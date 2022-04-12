@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import BanditIndexList from '../components/elements/IndexList/BanditIndexList'
+import NarniaIndexList from '../components/elements/IndexList/NarniaIndexList'
+import LeviathanIndexList from '../components/elements/IndexList/LeviathanIndexList'
 import NatasIndexList from '../components/elements/IndexList/NatasIndexList'
 import MainTitle from '../components/elements/MainTitle/MainTitle'
 import styles from '../styles/Home.module.css'
@@ -45,22 +46,25 @@ const Home: NextPage = () => {
               <NatasIndexList />
             </div>
           </li>
+          <li>
+            <Link href='/leviathan'><a className={style.ctfTitle}>Leviathan</a></Link>
+            <div>
+              <LeviathanIndexList />
+            </div>
+          </li>
+          <li>
+            <Link href='/narnia'><a className={style.ctfTitle}>Narnia</a></Link>
+            <div>
+              <NarniaIndexList />
+            </div>
+          </li>
         </ul>
-      </main>
-      <h2>Cipher</h2>
-      <Link href='/cipher'>Caesar Cipher</Link>
+        <h2>Cipher</h2>
+        <Link href='/cipher'>Cipher page</Link>
 
+      </main>
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+          Powered by Ryan
       </footer>
     </div >
   )

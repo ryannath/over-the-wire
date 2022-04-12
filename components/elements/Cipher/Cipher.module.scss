@@ -4,6 +4,7 @@
   width: 100%;
   height: 5rem;
   resize: none;
+  padding: 0.5rem 0.3rem;
 }
 
 .container {
@@ -16,6 +17,10 @@
 
 .dropDown {
   padding: 0.6rem 1rem;
-  margin-bottom: 2rem;
+}
+
+.dropDownContainer {
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }

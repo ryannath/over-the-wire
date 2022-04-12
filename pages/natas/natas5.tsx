@@ -28,7 +28,7 @@ const natas5 = () => {
           <a href='https://www.quora.com/How-do-websites-remember-you-are-logged-in'>Quora</a>.
           The answer was cookie!.
         </p>
-        <BlogImage src='/natas5-2.png/' alt='Cookie shown on the developer tools' />
+        <BlogImage src='/images/natas5-2.png/' alt='Cookie shown on the developer tools' />
         <p>
           Most of the cookies seem to be quite cryptic, except one named &quot;loggedin&quot;.
           The loggedin cookie has a value of 0. So I searched up ways to make that 0 to a 1.

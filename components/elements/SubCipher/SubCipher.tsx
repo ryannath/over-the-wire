@@ -29,7 +29,7 @@ const SubCipher = (
 
     for (let i = 0; i < plain.length; i++) {
       plainToSub[plain[i]] = sub[i];
-      subToPlain[plain[i]] = sub[i]
+      subToPlain[sub[i]] = plain[i];
     }
     return [plainToSub, subToPlain];
   })(plainLetters, subLetters);

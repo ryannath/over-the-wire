@@ -1,7 +1,6 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
-import genericStyles from '/styles/generic.module.scss'
 
 const natas4 = () => {
   return (
@@ -13,11 +12,9 @@ const natas4 = () => {
           While we were able to access the website using the password found previously
           we were instantly greeted with the following comment seen in the picture below.
         </p>
-        <div className={genericStyles.imgContainer}>
-          <img src='/natas4-1.png' alt='Message reads accessed disallowed. You
+        <BlogImage src='/images/natas4-1.png' alt='Message reads accessed disallowed. You
           are visiting from "" while authorizes users should come only
-          from "http://natas5.labs.overthewire.org/"' width={600} />
-        </div>
+          from "http://natas5.labs.overthewire.org/"'/>
         <p>
           It seems that, we are supposed to access this page through the natas5 website.
           How could we achieve this if we do not have access to the natas5 website? So,
@@ -35,7 +32,7 @@ const natas4 = () => {
           appear to be the case. I was still on that url. So, I simply began editing the
           webpage through the developer tools, adding a link to natas4.
         </p>
-        <BlogImage src='/natas4-2.png' alt='Picture showing an anchor tag added to the natas5 site so that it links to natas4 if clicked' />
+        <BlogImage src='/images/natas4-2.png' alt='Picture showing an anchor tag added to the natas5 site so that it links to natas4 if clicked' />
         <p>
           As simple is that, without access to the natas5 website, natas4 seem to think
           I had come from natas5. It then displayed the password for natas5.
@@ -53,7 +50,7 @@ const natas4 = () => {
           requested from an external site, they would be able to access what page those requests
           are coming from. The main concern MDN highlighted was if such widgets and images are
           located on a sensitive page, such as a reset password page. MDN recommends to use
-          a POST request rather than a GET requst as I deduce that a GET request would expose the 
+          a POST request rather than a GET requst as I deduce that a GET request would expose the
           referer header.
         </p>
         <p>
@@ -69,7 +66,7 @@ const natas4 = () => {
           specifically one called Authorization. I pasted the Authorization on the REST client
           header as well.
         </p>
-        <BlogImage src='/natas4-3.png' alt='Inserting a Referer key on the REST client' width={700}/>
+        <BlogImage src='/images/natas4-3.png' alt='Inserting a Referer key on the REST client' width={700} />
         <p>
           Just like that, this method worked too.
         </p>
@@ -78,23 +75,23 @@ const natas4 = () => {
       <section>
         <h2>Reflection</h2>
         <p>
-            This challenge was interesting because it touches upon HTTP headers, these information
-            are often neglected by beginner developers and users of the internet. I&apos;ve never
-            actually inspected them closely so it was surprising that they actually store
-            information such as where you came from. I suppose, it&apos;s not the most private
-            information for users, but it make me question what other things are hidden in these
-            headers. Well I suppose, authorization keys, as shown by my attempt at using
-            a REST client. There could potentially be sensitive information that may be visible
-            in the HTTP headers. As mentioned by MDN, these referer are often used for
-            data analytics, it made me wonder, what other data are being obtained by websites
-            when we simply use them? Since, most users would inspect the developer tools
-            thoroughly, much less the network tab, it really challenged my notion of how much
-            data are being collected about us on the internet.
+          This challenge was interesting because it touches upon HTTP headers, these information
+          are often neglected by beginner developers and users of the internet. I&apos;ve never
+          actually inspected them closely so it was surprising that they actually store
+          information such as where you came from. I suppose, it&apos;s not the most private
+          information for users, but it make me question what other things are hidden in these
+          headers. Well I suppose, authorization keys, as shown by my attempt at using
+          a REST client. There could potentially be sensitive information that may be visible
+          in the HTTP headers. As mentioned by MDN, these referer are often used for
+          data analytics, it made me wonder, what other data are being obtained by websites
+          when we simply use them? Since, most users would inspect the developer tools
+          thoroughly, much less the network tab, it really challenged my notion of how much
+          data are being collected about us on the internet.
         </p>
         <p>
           Another thing that was interesting was how easy it was to edit your header information.
           Without putting the actual password, and simply copying the authorization key, I
-          was able to login from a completely different application. 
+          was able to login from a completely different application.
         </p>
       </section>
       <SpoilerKey>

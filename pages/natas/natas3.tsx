@@ -16,7 +16,7 @@ const natas3 = () => {
         </p>
         <BlogImage
           alt="The html page showing nothing much except a comment about how not even Google will find any information leak"
-          src="/natas3-1.png"
+          src="/images/natas3-1.png"
         />
         <p>
           Without much luck, I tried using that clue, of not being able to be seen by Google, and searched

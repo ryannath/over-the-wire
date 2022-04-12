@@ -14,7 +14,7 @@ const natas5 = () => {
           puzzling statement about how we are not logged in.
         </p>
         <BlogImage
-          src='/natas5-1.png'
+          src='/images/natas5-1.png'
           alt='Page reads "access disallowed. You are not logged in"'
         />
         <p>

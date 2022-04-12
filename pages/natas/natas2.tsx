@@ -22,14 +22,14 @@ const natas2 = () => {
           on the developer tools, however the developer tools didn&apos;t show
           any other files worth noting, see the picture below.
         </p>
-        <BlogImage src='/natas2.png' alt='Image showing file hierarchy shown by developer tools' width={200} />
+        <BlogImage src='/images/natas2.png' alt='Image showing file hierarchy shown by developer tools' width={200} />
         <p>
           I did however notice that the pixel photo was located in the
           &quot;files&quot; directory. So I tried appending <code>/files</code> to the
           url, and there it was, <code>users.txt</code>. I simply clicked this file
           and it displayed the password for the next level.
         </p>
-        <BlogImage src='/natas2-2.png' alt='The directory page shown after /files was appended, listed as
+        <BlogImage src='/images/natas2-2.png' alt='The directory page shown after /files was appended, listed as
             one of the file is users.txt' width={320}/>
       </section>
       <section>

@@ -70,7 +70,7 @@ print($decodedSecret);`
       <SpoilerKey>
         {`W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl`}
       </SpoilerKey>
-      <PageNav link1='natas/natas7' link2='natas/natas9' />
+      <PageNav link1='/natas/natas7' link2='/natas/natas9' />
     </div>
   )
 

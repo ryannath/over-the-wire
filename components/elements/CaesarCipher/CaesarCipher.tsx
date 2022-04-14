@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
+import { ChangeEvent, Dispatch, SetStateAction, useEffect, useState } from "react";
 
 const CaesarCipher = (
   { setEncodedText, setDecodedText, encodedText, decodedText, lastSelected }:
@@ -64,12 +64,16 @@ const CaesarCipher = (
     }
   }
 
+  useEffect(() => {
+    if (lastSelected == 0) {
+      setEncodedText(caesarEncode(decodedText, offsetShift || 0));
+    } else {
+      setDecodedText(caesarEncode(encodedText, -offsetShift || 0));
+    }
+
+  })
   
-  if (lastSelected == 0) {
-    setEncodedText(caesarEncode(decodedText, offsetShift || 0));
-  } else {
-    setDecodedText(caesarEncode(encodedText, -offsetShift || 0));
-  }
+  
 
   return (
     <div>

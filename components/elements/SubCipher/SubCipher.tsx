@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styles from './SubCipher.module.scss';
 
 
@@ -27,10 +27,12 @@ const SubCipher = (
     let plainToSub: subMap = {};
     let subToPlain: subMap = {};
 
-    for (let i = 0; i < plain.length; i++) {
+    for (let i = 0; i < plain.length && i < sub.length; i++) {
       plainToSub[plain[i]] = sub[i];
       subToPlain[sub[i]] = plain[i];
     }
+    console.log(plainToSub);
+    console.log(subToPlain);
     return [plainToSub, subToPlain];
   })(plainLetters, subLetters);
 
@@ -39,7 +41,7 @@ const SubCipher = (
 
     let result = [];
     for (let i = 0; i < msg.length; i++) {
-      if ((msg[i].toLowerCase() in map)) {
+      if (msg[i].toLowerCase() in map) {
         if (msg[i] == msg[i].toUpperCase()) {
           result[i] = map[msg[i].toLowerCase()].toUpperCase();
         } else {
@@ -64,12 +66,14 @@ const SubCipher = (
     return alphabetArray.join('');
   }
 
-
-  if (lastSelected == 0) {
-    setEncodedText(subCipher(decodedText, plainToSub));
-  } else {
-    setDecodedText(subCipher(encodedText, subToPlain));
-  }
+  useEffect(() => {
+    if (lastSelected == 0) {
+      setEncodedText(subCipher(decodedText, plainToSub));
+    } else {
+      setDecodedText(subCipher(encodedText, subToPlain));
+    }  
+  })
+  
 
   return (
     <div>

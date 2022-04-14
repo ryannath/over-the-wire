@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import PageNav from '../../components/elements/PageNav/PageNav'
 import styles from '../../styles/Home.module.css'
+import Tag from '../../components/elements/Tag/Tag'
+import Keyword from '../../components/elements/Keyword/Keyword'
 
 const level0: NextPage = () => {
   return (
@@ -11,9 +13,9 @@ const level0: NextPage = () => {
       </Head>
       <div className={styles.container}>
         <h1>Level 0</h1>
-        <p>
-          Keywords: SSH
-        </p>
+        <Keyword>
+          <Tag>ssh</Tag>
+        </Keyword>
         <h2>Experience</h2>
         <p>
           In this beginning challenge, it asks us to connect to the <em>Over The Wire</em> (OTW) server
@@ -32,7 +34,7 @@ const level0: NextPage = () => {
           With that, I was able to obtain the password for the next level.
         </p>
 
-        <h2>SSH Research</h2>
+        <h2>Research</h2>
         <p>
           SSH (Secure Shell) is a protocol for secure remote login to a computer. It uses encryption to
           protect communicated data and its integrity. It provides alternative to other login protocols

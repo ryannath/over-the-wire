@@ -130,7 +130,7 @@ if($key != "") {
       <SpoilerKey>
         {`nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu`}
       </SpoilerKey>
-      <PageNav link1='natas8' link2='natas10' />
+      <PageNav link1='/natas/natas8' link2='/natas/natas10' />
     </div>
   )
 }

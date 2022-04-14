@@ -1,12 +1,19 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
+import Keyword from "../../components/elements/Keyword/Keyword"
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
+import Tag from "../../components/elements/Tag/Tag"
 
 const natas5 = () => {
   return (
     <div>
       <h1>Natas 5</h1>
+      <Keyword>
+        <Tag>cookies</Tag>
+        <Tag>developer-tools</Tag>
+        <Tag>third-party-cookies</Tag>
+      </Keyword>
       <section>
         <h2>Experience</h2>
         <p>
@@ -24,12 +31,14 @@ const natas5 = () => {
           what web related technology is used to check if we are logged in.
           By asking myself, I meant, ask Google that very question. As expected,
           there has been plenty of people who has asked the same question, one instance
-          is at the popular question asking website,
+          is at the popular question asking website,{' '}
           <a href='https://www.quora.com/How-do-websites-remember-you-are-logged-in'>Quora</a>.
           The answer was cookie!.
         </p>
         <BlogImage src='/images/natas5-2.png' alt='Cookie shown on the developer tools' width={400}/>
         <p>
+          I found out that it is possible to see your cookie using the developer tools
+          on the application tab.
           Most of the cookies seem to be quite cryptic, except one named &quot;loggedin&quot;.
           The loggedin cookie has a value of 0. So I searched up ways to make that 0 to a 1.
           Apparently, it was as simple as changing it on the developer tools and then reloading
@@ -111,7 +120,7 @@ const natas5 = () => {
       <SpoilerKey>
         {`aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1`}
       </SpoilerKey>
-      <PageNav link1='natas4' link2='natas6' />
+      <PageNav link1='/natas/natas4' link2='/natas/natas6' />
     </div>
   )
 }

@@ -1,11 +1,18 @@
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
+import Keyword from "../../components/elements/Keyword/Keyword"
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
+import Tag from "../../components/elements/Tag/Tag"
 
 const natas7 = () => {
   return (
     <div>
       <h1>Natas 7</h1>
+      <Keyword>
+        <Tag>php</Tag>
+        <Tag>local-file-inclusion</Tag>
+        <Tag>remote-file-inclusion</Tag>
+      </Keyword>
       <section>
         <h2>Experience</h2>
         <p>
@@ -88,7 +95,7 @@ const natas7 = () => {
       <SpoilerKey>
         {`DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe`}
       </SpoilerKey>
-      <PageNav link1='natas6' link2='natas8' />
+      <PageNav link1='/natas/natas6' link2='/natas/natas8' />
     </div>
   )
 }

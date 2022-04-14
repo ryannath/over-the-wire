@@ -1,11 +1,16 @@
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
+import Keyword from "../../components/elements/Keyword/Keyword"
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
+import Tag from "../../components/elements/Tag/Tag"
 
 const natas0 = () => {
   return (
     <div>
       <h1>Natas 0</h1>
+      <Keyword>
+        <Tag>developer-tools</Tag>
+      </Keyword>
       <section>
         <h2>Experience</h2>
         <p>
@@ -28,7 +33,7 @@ const natas0 = () => {
       </SpoilerKey>
 
 
-      <PageNav link1='/natas' link2='natas1' />
+      <PageNav link1='/natas' link2='/natas/natas1' />
     </div>
   )
 }

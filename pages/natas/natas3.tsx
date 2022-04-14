@@ -1,12 +1,20 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
+import Keyword from "../../components/elements/Keyword/Keyword"
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
+import Tag from "../../components/elements/Tag/Tag"
 
 const natas3 = () => {
   return (
     <div>
       <h1>Natas 3</h1>
+      <Keyword>
+        <Tag>web-crawler</Tag>
+        <Tag>robots.txt</Tag>
+        <Tag>seo</Tag>
+        <Tag>documentation</Tag>
+      </Keyword>
       <section>
         <h2>Experience</h2>
         <p>
@@ -88,7 +96,7 @@ const natas3 = () => {
       <SpoilerKey>
         {`Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ`}
       </SpoilerKey>
-      <PageNav link1='natas2' link2='natas4' />
+      <PageNav link1='/natas/natas2' link2='/natas/natas4' />
     </div>
   )
 }

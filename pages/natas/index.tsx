@@ -23,7 +23,7 @@ const natas = () => {
       </p>
       <h2>List of levels</h2>
       <NatasIndexList />
-      <PageNav link1='/bandit/bandit0' link2='natas/natas0'/>
+      <PageNav link1='/bandit/bandit0' link2='/natas/natas0'/>
     </>
       
   )

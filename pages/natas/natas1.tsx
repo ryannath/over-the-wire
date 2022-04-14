@@ -1,10 +1,15 @@
+import Keyword from "../../components/elements/Keyword/Keyword"
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
+import Tag from "../../components/elements/Tag/Tag"
 
 const natas1 = () => {
   return (
     <div>
       <h1>Natas 1</h1>
+      <Keyword>
+        <Tag>developer-tools</Tag>
+      </Keyword>
       <section>
         <h2>Experience</h2>
         <p>
@@ -36,8 +41,8 @@ const natas1 = () => {
         </p>
         <p>
           Secondly, this easy activity demonstrates one of the main problem with
-          attempting to <em>blacklist</em> known methods of attacks. Blacklists are
-          requires constant updates for every single new attacks and it takes a more
+          attempting to <em>blacklist</em> known methods of attacks. Blacklists
+          require constant updates for every single new attack and it takes a
           reactive approach rather than proactive. It often distracts developer
           from actually fixing the root cause of the problem, which in this
           case is having sensitive information in the html document.
@@ -55,7 +60,7 @@ const natas1 = () => {
       <SpoilerKey>
         {`ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi`}
       </SpoilerKey>
-      <PageNav link1='natas0' link2='natas2'/>
+      <PageNav link1='/natas/natas0' link2='/natas/natas2'/>
     </div>
   )
 }

@@ -25,7 +25,7 @@ const bandit = () => {
       </p>
       <h2>List of levels</h2>
       <BanditIndexList />
-      <PageNav link1='' link2='bandit/bandit0'/>
+      <PageNav link1='/' link2='/bandit/bandit0'/>
     </>
   );
 }

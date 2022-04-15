@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CaesarCipher from "../CaesarCipher/CaesarCipher";
 import SubCipher from "../SubCipher/SubCipher";
+import VigCipher from "../VigCipher/VigCipher";
 import styles from './Cipher.module.scss';
 
 const Cipher = () => {
@@ -25,6 +26,9 @@ const Cipher = () => {
     case 1:
       cipherElement = <SubCipher {...attributes} />
       break;
+    case 2:
+      cipherElement = <VigCipher {...attributes}/>
+      break;
     default:
       cipherElement = <CaesarCipher {...attributes} />;
   }
@@ -35,6 +39,7 @@ const Cipher = () => {
         <select className={styles.dropDown} value={cipher} onChange={(e) => setCipher(parseInt(e.target.value))}>
           <option value={0}>Caesar Cipher</option>
           <option value={1}>Substitution Cipher</option>
+          <option value={2}>Vigenère Cipher</option>
         </select>
       </div>
 

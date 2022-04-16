@@ -4,6 +4,7 @@ import PageNav from '../../components/elements/PageNav/PageNav'
 import styles from '../../styles/Home.module.css'
 import Tag from '../../components/elements/Tag/Tag'
 import Keyword from '../../components/elements/Keyword/Keyword'
+import SpoilerKey from '../../components/elements/SpoilerKey/SpoilerKey'
 
 const level0: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const level0: NextPage = () => {
         <h2>Experience</h2>
         <p>
           In this beginning challenge, it asks us to connect to the <em>Over The Wire</em> (OTW) server
-          using SSH. It may be surprising but I have actually never used
+          using SSH. It might be surprising but I have actually never used
           SSH previously. I have used SSH key for the purpose of Git, however, I&apos;ve never really
           delve into it. So what is SSH and how do we login to the OTW server? Read my research in the
           SSH background subheading.
@@ -29,7 +30,7 @@ const level0: NextPage = () => {
           Reading the VS Code guide on using SSH, I found that we should use the following
           syntax: <code>ssh user@hostname</code>. VS Code is supposed to support SSH through its GUI, but
           I wasn&apos;t able to use it, but I am quite comfortable with just using the command line.
-          Then for the port I found a <a href='https://askubuntu.com/questions/264046/how-to-ssh-on-a-port-other-than-22'>StackExchange answer</a>
+          Then for the port I found a <a href='https://askubuntu.com/questions/264046/how-to-ssh-on-a-port-other-than-22'>StackExchange answer</a>{' '}
           which informed me to use the <code>-p</code> flag to indicate the port of the server I wish to connect.
           With that, I was able to obtain the password for the next level.
         </p>
@@ -84,7 +85,10 @@ const level0: NextPage = () => {
           we ourselves may be writing.
         </p>
       </div>
-      <PageNav link1='/bandit' link2='/natas'/>
+      <SpoilerKey>
+        {`boJ9jbbUNNfktd78OOpsqOltutMc3MY1`}
+      </SpoilerKey>
+      <PageNav link1='/bandit' link2='/bandit/bandit1'/>
     </div>
   )
 }

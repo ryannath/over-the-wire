@@ -1,6 +1,6 @@
 import IndexList from "./IndexList"
 
-const numPages = 1;
+const numPages = 6;
 
 const BanditIndexList = () => {
   return (

@@ -1,6 +1,6 @@
 import IndexList from "./IndexList"
 
-const numPages = 3;
+const numPages = 7;
 
 const LeviathanIndexList = () => {
   return (

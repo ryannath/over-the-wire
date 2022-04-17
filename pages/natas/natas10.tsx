@@ -1,12 +1,17 @@
 import BlogImage from "../../components/elements/BlogImage/BlogImage"
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
+import Keyword from "../../components/elements/Keyword/Keyword"
 import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
+import Tag from "../../components/elements/Tag/Tag"
 
 const natas10 = () => {
   return (
     <div>
       <h1>Natas 10</h1>
+      <Keyword>
+        <Tag>php</Tag>
+      </Keyword>
       <section>
         <h2>Experience</h2>
         <p>

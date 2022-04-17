@@ -14,7 +14,7 @@ const leviathan = () => {
       </p>
       <h2>List of levels</h2>
       <LeviathanIndexList />
-      <PageNav link1='' link2='leviathan/leviathan0'/>
+      <PageNav link1='/natas/natas16' link2='leviathan/leviathan0'/>
     </>
       
   )

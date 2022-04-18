@@ -1,5 +1,5 @@
 import CodeBlock from "../../components/elements/CodeBlock/CodeBlock"
-import PageNav from "../../components/elements/PageNav/PageNav">
+import PageNav from "../../components/elements/PageNav/PageNav"
 import SpoilerKey from "../../components/elements/SpoilerKey/SpoilerKey"
 
 const leviathan5 = () => {

@@ -11,6 +11,7 @@ const leviathan2 = () => {
       <h1>Leviathan 2</h1>
       <Keyword>
         <Tag>symlink</Tag>
+        <Tag>non-quoted-arguments</Tag>
       </Keyword>
       <section>
         <h2>Experience</h2>
@@ -105,6 +106,24 @@ system("/bin/cat /tmp/insertrandom523/te"...test`}
       </section>
       <section>
         <h2>Reflection</h2>
+        <p>
+          From this challenge, I again learn the usefullness of ltrace and also
+          how dangerous it is to call shell commands. The main fault of this program
+          was really the stripping of double quotes in the snprintf. This was a
+          very subtle difference and an unobservant checker would have not noticed
+          it. So it really also taught me to be more observant especially, again,
+          with how vulnerable shell command executions can be.
+        </p>
+        <p>
+          Now, we do not have access to how the argument is inserted as part
+          of the snprintf and access, however, I suspect that because double
+          quotes are used in C as indicators of strings, it may have stripped those
+          out when fitting inside the snprintf, as unlike the call to access,
+          another string has been concatenated, namely the &quot;/bin/cat&quot;
+          part at the start. So I learnt that this is a potential vulnerable pattern,
+          The quotes for the arguments should be escaped to ensure that they
+          are considered as a single argument to the shell command.
+        </p>
       </section>
       <SpoilerKey>
         {`Ahdiemoo1j`}
